@@ -1,5 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
+import { connect } from 'react-redux'
+import { setCurrentUser } from './redux/user/user.action'
 
 function App() {
   return (
@@ -17,9 +19,10 @@ function App() {
         >
           Learn React
         </a>
+        <button type="button" onClick={setCurrentUser('joe')}>Dispatch Me</button>
       </header>
     </div>
   );
 }
 
-export default App;
+export default connect()(App);
