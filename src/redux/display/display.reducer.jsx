@@ -1,7 +1,8 @@
 // display.reducer.js
 
 const INITIAL_STATE = {
-    backgroundColor: 'lightblue'
+    backgroundColor: 'lightblue',
+    frameColor: 'hotpink'
 }
 
 const displayReducer = (state = INITIAL_STATE, action) => {
@@ -11,6 +12,11 @@ const displayReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state, 
                 backgroundColor: action.payload
+            }
+        case 'SET_FRAME_BACKGROUND_COLOR':
+            return {
+                ...state, 
+                frameColor: action.payload
             }
         default:
             return state;

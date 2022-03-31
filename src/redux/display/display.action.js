@@ -5,4 +5,9 @@ export const setHTMLBackgroundColor = color => ({
     payload: color
 })
 
+export const setFrameBackgroundColor = color => ({
+    type: 'SET_FRAME_BACKGROUND_COLOR',
+    payload: color
+})
+
 // END of document
